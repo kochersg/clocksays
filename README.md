@@ -10,5 +10,6 @@ Feel free to add other languages and issue pull request.
 ```python
 import clocksays.saytime as st
 import datetime as dt
-t_str = st.time2words(t = dt.datetime.now(), language='de')
+t_str = st.clocksays(t = dt.datetime.now(), language='de', prefix='Es ist ', suffix='.')
 print(t_str)
+```

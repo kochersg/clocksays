@@ -54,8 +54,10 @@ def hour2word(hour: int, language: str = "de"):
         case _:
             return "unbekannte Sprache"
 
+def clocksays(t: dt.datetime, language: str="de", prefix: str='', suffix: str='') -> str:
+    return prefix + time2words(t=t, language=language) + suffix
 
-def time2words(t: dt.datetime, language: str = "de") -> str:
+def time2words(t: dt.datetime, language: str="de") -> str:
     if t.minute in (1, 16, 31, 46):
         return shortly_past(minute=t.minute, hour=t.hour, languague=language)
     if t.minute in (14, 29, 44, 59):
