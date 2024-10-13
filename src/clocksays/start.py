@@ -6,9 +6,11 @@ def test():
     for m in range(60):
         t = dt.datetime.strptime(f"2024-01-01 14:{m:02}:01", "%Y-%m-%d %H:%M:%S")
         print(t, st.clocksays(t=t, language="de", prefix='Es ist ', suffix='.'))
-    for m in range(60):
-        t = dt.datetime.strptime(f"2024-01-01 14:{m:02}:01", "%Y-%m-%d %H:%M:%S")
         print(t, st.clocksays(t=t, language="en", prefix='It is ', suffix='.'))
+        print(t, st.clocksays(t=t, language="fr", prefix='Il est ', suffix='.'))
+    # for m in range(60):
+    #     t = dt.datetime.strptime(f"2024-01-01 14:{m:02}:01", "%Y-%m-%d %H:%M:%S")
+    #     print(t, st.clocksays(t=t, language="en", prefix='It is ', suffix='.'))
 
 
 def test2():
